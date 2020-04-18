@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/somethingLight">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <EditText
+            android:id="@+id/Month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="6"
+            android:inputType="text"
+            android:hint="Enter Month: "
+            android:background="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <EditText
+    android:id="@+id/Username"
+    android:inputType="textPersonName"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:maxLength="25"
+    android:hint="Enter your name"
+    android:layout_marginLeft="16dp"
+    android:layout_marginStart="16dp"
+    android:background="@color/somethingLight"
+    android:shadowColor="@color/colorPrimaryDark"/>
+
+    <EditText
+        android:id="@+id/GroceryType"
+        android:inputType="textPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter grocery type i.e Food grocery"
+        android:maxLength="25"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/somethingLight"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/itemTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="ITEMS"
+            android:textAllCaps="true"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="price (#)"
+            android:textAllCaps="true"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_height="400dp"
+        android:layout_width="match_parent"
+        android:nestedScrollingEnabled="true">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp">
+
+            <LinearLayout
+                android:id="@+id/itemsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginEnd="8dp">
+
+
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item1"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item2"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item3"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item4"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item5"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item6"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item7"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item8"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item9"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item10"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item11"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item12"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item13"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item14"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item15"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item16"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item17"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item18"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item19"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/Item20"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+            </LinearLayout>
+
+        <View
+        android:background="?android:attr/listDivider"
+        android:id="@+id/divider"
+        android:layout_height="match_parent"
+        android:layout_width="1dp"
+        tools:layout_editor_absoluteY="168dp" />
+
+            <LinearLayout
+            android:id="@+id/priceLayout"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp">
+
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price1"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price2"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price3"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price4"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price5"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price6"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price7"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price8"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price9"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price10"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price11"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price12"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price13"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price14"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price15"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price16"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price17"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price18"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price19"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <EditText
+                    android:ems="10"
+                    android:id="@+id/price20"
+                    android:inputType="textPersonName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+    android:id="@+id/getSummaryButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="get summary"
+    android:textAllCaps="true"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:onClick="createSummary"
+    android:background="@color/colorPrimary"/>
+</LinearLayout>
