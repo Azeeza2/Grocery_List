@@ -1,25 +1,18 @@
 package com.example.mygroceries_javatask3;
 
-import android.annotation.SuppressLint;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.Layout;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.LinearLayout;
+
+
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.w3c.dom.Text;
-
-import java.text.MessageFormat;
-import java.time.Month;
-import java.util.Objects;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -490,19 +483,25 @@ public class SecondActivity extends AppCompatActivity {
            groceryTypeTextView.setText("Grocery Type: " + groceryTypeIntent.getStringExtra("Grocery Type"));
        }
 
+       TextView TotalPrice = (TextView) findViewById(R.id.TOTALPRICE);
+
        // getting values for items in below textViews to be set as mail subject
        String month = monthTextView.getText().toString();
        String name = nameTextView.getText().toString();
        String groceryType = groceryTypeTextView.getText().toString();
+       String total = TotalPrice.getText().toString();
 
        String summaryMessage = name + "\n" + month +  "\n" + groceryType  ;
-       summaryMessage += "\n" + ((item1 != null)? item1 + ": " + price1  + "\n":"" ) + ((item2 != null)? item2 + ": " + price2 + "\n":"" )+ ((item3 != null)?item3 + ": " + price3 + "\n":"" )+ ((item4 != null)? item4 + ": " + price4 + "\n":"" ) + ((item5 != null)?item5 + ": " + price5 + "\n":"" );
-       summaryMessage += "\n" + ((item6 != null)? item6 + ": " + price6  + "\n":"" ) + ((item7 != null)? item7 + ": " + price7 + "\n":"" )+ ((item8 != null)?item8 + ": " + price8 + "\n":"" )+ ((item9 != null)? item9 + ": " + price9 + "\n":"" ) + ((item10 != null)?item10 + ": " + price10 + "\n":"" );
-       summaryMessage += "\n" + ((item11 != null)? item11 + ": " + price11  + "\n":"" ) + ((item12 != null)? item12 + ": " + price12 + "\n":"" )+ ((item13 != null)?item13 + ": " + price13 + "\n":"" )+ ((item14 != null)? item14 + ": " + price14 + "\n":"" ) + ((item15 != null)?item15 + ": " + price15 + "\n":"" );
-       summaryMessage += "\n" + ((item16 != null)? item16 + ": " + price16  + "\n":"" ) + ((item17 != null)? item17 + ": " + price17 + "\n":"" )+ ((item18 != null)?item18 + ": " + price18 + "\n":"" )+ ((item19 != null)? item19 + ": " + price19 + "\n":"" ) + ((item20 != null)?item20 + ": " + price20 + "\n":"" );
+       summaryMessage += "\n";
+       summaryMessage += "\n" + ((!TextUtils.isEmpty(item1))? item1 + " : " + price1 : "") + "\n" + ((!TextUtils.isEmpty(item2))? item2 + " : " + price2 : "") + "\n" +((!TextUtils.isEmpty( item3))? item3 + " : " + price3 :"" )+ "\n" + ((!TextUtils.isEmpty( item4))? item4 + " : " + price4 :"" ) + "\n" + ((!TextUtils.isEmpty( item5))? item5 + " : " + price5 :"" );
+       summaryMessage += "\n" + ((!TextUtils.isEmpty(item6))? item6 + " : " + price6 : "") + "\n" + ((!TextUtils.isEmpty(item7))? item7 + " : " + price7 : "") + "\n" +((!TextUtils.isEmpty( item8))? item8 + " : " + price8 :"" )+ "\n" + ((!TextUtils.isEmpty( item9))? item9 + " : " + price9 :"" ) + "\n" + ((!TextUtils.isEmpty( item10))? item10 + " : " + price10 :"" );
+       summaryMessage += "\n" + ((!TextUtils.isEmpty(item11))? item11 + " : " + price11 : "") + "\n" + ((!TextUtils.isEmpty(item12))? item12 + " : " + price12 : "") + "\n" +((!TextUtils.isEmpty( item13))? item13 + " : " + price13 :"" )+ "\n" + ((!TextUtils.isEmpty( item14))? item14 + " : " + price14 :"" ) + "\n" + ((!TextUtils.isEmpty( item15))? item15 + " : " + price15 :"" );
+       summaryMessage += "\n" + ((!TextUtils.isEmpty(item16))? item16 + " : " + price16 : "") + "\n" + ((!TextUtils.isEmpty(item17))? item17 + " : " + price17 : "") + "\n" +((!TextUtils.isEmpty( item18))? item18 + " : " + price18 :"" )+ "\n" + ((!TextUtils.isEmpty( item19))? item19 + " : " + price19 :"" ) + "\n" + ((!TextUtils.isEmpty( item20))? item20 + " : " + price20 :"" );
+       //  summaryMessage += "\n" + ((item16 != null)? item16 + " : " + price16  + "\n":"" ) + ((item17 != null)? item17 + " : " + price17 + "\n":"" )+ ((item18 != null)?item18 + " : " + price18 + "\n":"" )+ ((item19 != null)? item19 + " : " + price19 + "\n":"" ) + ((item20 != null)?item20 + " : " + price20 + "\n":"" );
+       summaryMessage += "\n";
+       summaryMessage += "\n" + total;
 
-
-       // sending mail intent to be handled by the best app available
+               // sending mail intent to be handled by the best app available
        Intent intent = new Intent(Intent.ACTION_SENDTO);
        intent.setData(Uri.parse("mailto:balogunzzt@gmail.com" )); // only email apps should handle this
       // intent.putExtra(Intent.EXTRA_SUBJECT, name + "'s" + " Summary of order of " + groceryType + " for " + " month: " + month);
