@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".SecondActivity"
-    android:background="@color/somethingLight">
+    android:background="#B2DFDB"
+    android:textColor="@android:color/black">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,8 +23,12 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:hint="Enter Month"
-            android:background="@color/colorPrimary"/>
+            android:text="Month: "
+            android:background="@color/colorPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:textColor="@android:color/black" />
     </LinearLayout>
 
     <TextView
@@ -34,7 +39,10 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="10dp"
         android:text="Name: "
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:textColor="@android:color/black"/>
 
     <TextView
         android:id="@+id/GROCERYTYPE"
@@ -44,7 +52,10 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
-        android:textSize="16sp"/>
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:textColor="@android:color/black"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,7 +74,12 @@
             android:gravity="center_horizontal"
             android:text="Summary"
             android:textAllCaps="true"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/text_background"/>
 
 
     </LinearLayout>
@@ -80,8 +96,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@color/somethingLight">
+            android:layout_marginEnd="8dp">
 
             <LinearLayout
                 android:id="@+id/ITEMS_LAYOUT"
@@ -365,7 +380,10 @@
             android:textAllCaps="true"
             android:layout_gravity="right"
             android:layout_marginRight="20dp"
-            android:layout_marginEnd="20dp"/>
+            android:layout_marginEnd="20dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
 
     <Button
         android:id="@+id/getSummaryButton"
@@ -377,5 +395,9 @@
         android:onClick="shareSummary"
         android:text="share summary"
         android:textAllCaps="true"
-        android:background="@color/colorPrimary"/>
+        android:background="@drawable/get_button"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:textColor="@android:color/black"/>
 </LinearLayout>

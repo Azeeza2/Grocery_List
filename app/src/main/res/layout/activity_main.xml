@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@color/somethingLight">
+    android:background="#B2DFDB"
+    android:textColor="@android:color/black">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,15 +20,20 @@
             android:id="@+id/Month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:paddingStart="8dp"
+            android:paddingLeft="16dp"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:padding="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:ems="6"
             android:inputType="text"
             android:hint="Enter Month: "
-            android:background="@color/colorPrimary"/>
+            android:background="@drawable/text_background"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
     </LinearLayout>
 
     <EditText
@@ -39,8 +45,12 @@
     android:hint="Enter your name"
     android:layout_marginLeft="16dp"
     android:layout_marginStart="16dp"
-    android:background="@color/somethingLight"
-    android:shadowColor="@color/colorPrimaryDark"/>
+    android:background="@drawable/text_background_2"
+    android:shadowColor="@color/colorPrimaryDark"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    android:padding="8dp"
+    android:textColor="@android:color/black"/>
 
     <EditText
         android:id="@+id/GroceryType"
@@ -49,9 +59,14 @@
         android:layout_height="wrap_content"
         android:hint="Enter grocery type i.e Food grocery"
         android:maxLength="25"
+        android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
-        android:background="@color/somethingLight"/>
+        android:background="@drawable/text_background"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:textColor="@android:color/black"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -61,7 +76,10 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@color/colorPrimary">
+        android:background="@drawable/text_background"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="8dp">
 
         <TextView
             android:id="@+id/itemTextView"
@@ -70,7 +88,8 @@
             android:gravity="center_horizontal"
             android:text="ITEMS"
             android:textAllCaps="true"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:textColor="@android:color/black"/>
 
         <TextView
             android:id="@+id/priceTextView"
@@ -79,7 +98,8 @@
             android:text="price (#)"
             android:textAllCaps="true"
             android:layout_weight="1"
-            android:gravity="center_horizontal"/>
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/black"/>
     </LinearLayout>
 
     <ScrollView
@@ -385,5 +405,9 @@
     android:layout_marginTop="20dp"
     android:layout_marginBottom="20dp"
     android:onClick="createSummary"
-    android:background="@color/colorPrimary"/>
+    android:textSize="16sp"
+    android:textStyle="bold"
+    android:padding="8dp"
+    android:textColor="@android:color/black"
+    android:background="@drawable/get_button"/>
 </LinearLayout>
